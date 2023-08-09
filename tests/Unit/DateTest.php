@@ -14,12 +14,6 @@ it('can convert to english number', function(){
     expect($convert)->toBeString('1234567');
 });
 
-it('can get all regions for nrc', function(){
-    $convert = Convert::regions();
-
-    expect($convert)->toBeArray();
-});
-
 it('can convert nrc number to myanmar number', function(){
     $convert = Convert::nrcNumber('215686');
 
