@@ -13,9 +13,9 @@ composer require hakhant/convert-mm
 #### Convert number to myanmar format
 ```php
 
-$today = '1234567';
+$number = '1234567';
 
-$convert = Convert::mm($today);
+$convert = Convert::mm($number);
 
 return $convert;
 
