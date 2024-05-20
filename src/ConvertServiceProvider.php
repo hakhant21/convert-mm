@@ -22,7 +22,7 @@ class ConvertServiceProvider extends ServiceProvider
         if ($this->app->runningInConsole()) {
             $this->publishes([
                 __DIR__.'/../config/config.php' => config_path('convert.php'),
-            ], 'config');
+            ], 'convert');
 
             // Publishing the views.
             /*$this->publishes([
