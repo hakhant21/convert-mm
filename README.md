@@ -8,6 +8,11 @@ You can install the package via composer:
 composer require hakhant/convert-mm
 ```
 
+## Publish the configuration:
+```bash
+php artisan vendor:publish --tag=convert
+```
+
 ## Usage
 
 #### Convert number to myanmar format
