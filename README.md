@@ -1,6 +1,6 @@
 # Convert Myanmar Date, Number and Get NRC Regions, Citizens and Townships
 
-[![Test Suite Status](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml)
+[![Test Suite Status](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml/badge.svg?branch=main)](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml)
 
 ## Installation
 
