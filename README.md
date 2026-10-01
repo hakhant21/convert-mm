@@ -1,128 +1,122 @@
 # Convert Myanmar Date, Number and Get NRC Regions, Citizens and Townships
-[![Testing](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml)
+
+[![Test Suite Status](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml/badge.svg?branch=main&event=push)](https://github.com/hakhant21/convert-mm/actions/workflows/main.yml)
+
 ## Installation
 
-You can install the package via composer:
+Install the package via Composer:
 
 ```bash
 composer require hakhant/convert-mm
 ```
 
-## Publish the configuration:
+## Publish the configuration
+
 ```bash
 php artisan vendor:publish --tag=convert
 ```
 
 ## Usage
 
-#### Convert number to myanmar format
+### Convert a number to Myanmar format
+
 ```php
-
 $number = '1234567';
-
 $convert = Convert::mm($number);
 
 return $convert;
-
-// output 
-'၁၂၃၄၅၆၇'
+// Output: '၁၂၃၄၅၆၇'
 ```
 
-#### Convert date to myanmar format
+### Convert a date to Myanmar format
 
 ```php
-
 $today = '2023-08-07';
-
 $convert = Convert::mmDate($today);
 
 return $convert;
-
-// output 
-'၂၀၂၃ ခုနှစ်၊သြဂုတ်လ၊ ၀၇ ရက်'
-
+// Output: '၂၀၂၃ ခုနှစ်၊သြဂုတ်လ၊ ၀၇ ရက်'
 ```
 
-### Date Avaliable lists 
-```php
-
-$mmDateNumber = Convert::mmDateNumber('2023-08-07') 
-// output '၂၀၂၃-၀၈-၀၇'
-
-$year = Convert::year('2023') 
-// output '၂၀၂၃'
-
-$month = Convert::month('08') 
-// output 'သြဂုတ်'
-
-$day = Convert::day('8') 
-// output '၈'
-
-```
-
-### NRC Avaliable Lists
+### Date available lists
 
 ```php
+$mmDateNumber = Convert::mmDateNumber('2023-08-07');
+// Output: '၂၀၂၃-၀၈-၀၇'
 
-$regions = Convert::regions(); 
-// return array of regions english format 
+$year = Convert::year('2023');
+// Output: '၂၀၂၃'
 
-$mmRegions = Convert::mmRegions(); 
-// return array of regions myanmar format
+$month = Convert::month('08');
+// Output: 'သြဂုတ်'
 
-$citizens = Convert::citizens(); 
-// return array of citizens 
-
-$mmCitizens = Convert::mmCitizens(); 
-// return array of citizens myanmar format
-
-$townships = Convert::townships(); 
-// return array of townships 
-
-$mmTownships = Convert::mmTownships(); 
-// return array of townships 
-
-$number = Convert::nrcNumber('215556'); 
-// return string '215556'
-
-$mmNumber = Convert::mmNrcNumber('215556') 
-// return string '၂၁၅၅၅၆'
-
-$fullNrc = Convert::fullNrc('12/', 'YaKaNa', '(N)', 123456); 
-// Or 
-$fullNrc = Convert::fullNrc('12', 'YaKaNa', 'N', 123456);
-// Example out  '12/YaKaNa(N)215556'
-
-$mmFullNrc = Convert::mmFullNrc('၁၂/', 'ရကန', '(နိင်)', 123456); 
-// Or
-$mmFullNrc = Convert::mmFullNrc('၁၂', 'ရကန', 'နိင်', 123456); 
-// example output '၁၂/ရကန(နိုင်)၂၁၅၅၅၆'
-
+$day = Convert::day('8');
+// Output: '၈'
 ```
 
-### Testing
+### NRC available lists
+
+```php
+$regions = Convert::regions();
+// Returns an array of regions in English.
+
+$mmRegions = Convert::mmRegions();
+// Returns an array of regions in Myanmar.
+
+$citizens = Convert::citizens();
+// Returns an array of citizens.
+
+$mmCitizens = Convert::mmCitizens();
+// Returns an array of citizens in Myanmar.
+
+$townships = Convert::townships();
+// Returns an array of townships.
+
+$mmTownships = Convert::mmTownships();
+// Returns an array of townships in Myanmar.
+
+$number = Convert::nrcNumber('215556');
+// Returns '215556'.
+
+$mmNumber = Convert::mmNrcNumber('215556');
+// Returns '၂၁၅၅၅၆'.
+
+$fullNrc = Convert::fullNrc('12/', 'YaKaNa', '(N)', 215556);
+// Or: Convert::fullNrc('12', 'YaKaNa', 'N', 215556);
+// Example output: '12/YaKaNa(N)215556'
+
+$mmFullNrc = Convert::mmFullNrc('၁၂/', 'ရကန', '(နိုင်)', 215556);
+// Or: Convert::mmFullNrc('၁၂', 'ရကန', 'နိုင်', 215556);
+// Example output: '၁၂/ရကန(နိုင်)၂၁၅၅၅၆'
+```
+
+## Test Suite Status
+
+The badge at the top reports the status of the GitHub Actions test workflow on pushes to `main`.
+
+Run the test suite locally with:
 
 ```bash
 composer test
 ```
 
-### Changelog
+## Changelog
 
-Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
+See [CHANGELOG](CHANGELOG.md) for details about recent changes.
 
 ## Contributing
 
-Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
+See [CONTRIBUTING](CONTRIBUTING.md) for contribution details.
 
-### Security
+## Security
 
-If you discover any security related issues, please email info@hakhant.tech instead of using the issue tracker.
+For security issues, email [info@hakhant.tech](mailto:hahant21@gmail.com) instead of using the issue tracker.
 
 ## Credits
 
--   [Htet Aung Khant](https://github.com/hakhant21)
--   [All Contributors](../../contributors)
+- [Htet Aung Khant](https://github.com/hakhant21)
+- [All Contributors](../../contributors)
 
 ## License
 
-The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
+The MIT License (MIT). See [LICENSE](LICENSE.md) for details.
