@@ -1,11 +1,11 @@
 {
     "name": "hakhant/convert-mm",
-    "description": "Myanmar date and nrc number converter",
+    "description": "Myanmar date and NRC number converter",
     "keywords": [
         "hakhant",
         "convert-mm"
     ],
-    "homepage": "https://github.com/hakhant21/convert-mm.git",
+    "homepage": "https://github.com/hakhant21/convert-mm",
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -16,20 +16,20 @@
         }
     ],
     "require": {
-        "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0"
+        "illuminate/support": "^7.0 || ^8.0 || ^9.0 || ^10.0 || ^11.0 || ^12.0 || ^13.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^7.0 || ^8.0",
-        "pestphp/pest": "^1.0"
+        "orchestra/testbench": "^11.0",
+        "pestphp/pest": "^3.0 || ^4.0"
     },
     "autoload": {
         "psr-4": {
-            "Hakhant\\Converter\\": "src"
+            "Hakhant\\Converter\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Hakhant\\Converter\\Tests\\": "tests"
+            "Hakhant\\Converter\\Tests\\": "tests/"
         }
     },
     "scripts": {
